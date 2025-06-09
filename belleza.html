@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Belleza | Margue</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Margue</h1>
+    <p class="subtitulo">Descubre tu estilo. Vive con glamour.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="belleza.html" aria-current="page">Belleza</a></li>
+        <li><a href="suscripcion.html">Suscripción</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tips de belleza -->
+    <section id="tips-belleza" class="galeria">
+      <h2 style="grid-column: 1/-1;">Tips de Belleza</h2>
+      <article>
+        <img src="img/serum.jpg" alt="Serum facial" />
+        <p><strong>Hidratación antes del maquillaje:</strong> Aplica un buen sérum hidratante antes de la base para un acabado natural.</p>
+      </article>
+      <article>
+        <img src="img/spf.jpg" alt="Protector solar" />
+        <p><strong>No olvides el protector solar:</strong> Úsalo a diario, incluso en interiores. Tu piel te lo agradecerá.</p>
+      </article>
+      <article>
+        <img src="img/gloss.jpg" alt="Labial glossy" />
+        <p><strong>Labios jugosos:</strong> Aplica gloss sobre tu labial mate favorito para un efecto fresco y juvenil.</p>
+      </article>
+
+      <article>
+        <img src="img/crioterapia.jpg" alt="Rodillo de hielo facial" />
+        <p><strong>Crioterapia facial diaria:</strong> Usa un rodillo de jade o esferas de acero inoxidable refrigeradas para desinflamar y tonificar el rostro al despertar.</p>
+      </article>
+      <article>
+        <img src="img/limpieza.jpg" alt="Limpieza doble de lujo" />
+        <p><strong>Doble limpieza premium:</strong> Elimina impurezas con un aceite limpiador y luego un gel suave. Es el secreto de las pieles perfectas tipo glass skin.</p>
+      </article>
+      <article>
+        <img src="img/serumlujo.jpg" alt="Aplicación de sérum con gua sha" />
+        <p><strong>Masaje con gua sha y sérum:</strong> Potencia tu rutina aplicando tu sérum con movimientos ascendentes usando gua sha de cuarzo o jade. Ayuda a esculpir el rostro.</p>
+      </article>
+      <article>
+        <img src="img/seda.jpg" alt="Funda de almohada de seda" />
+        <p><strong>Duerme sobre seda natural:</strong> Sustituye tus fundas por seda. Reduce arrugas, frizz y mantiene tu piel hidratada sin esfuerzo.</p>
+      </article>
+      <article>
+        <img src="img/contorno-ojos-lujo.jpg" alt="Contorno de ojos de lujo" />
+        <p><strong>Contorno de ojos de alta gama:</strong> Usa una crema premium con aplicador metálico para descongestionar y suavizar las líneas finas. Ideal para lucir descansada y luminosa.</p>
+      </article>
+
+
+    </section>
+
+    <!-- Productos recomendados -->
+    <section class="galeria">
+      <h2 style="grid-column: 1/-1;">Productos de Belleza Recomendados</h2>
+      <article>
+        <img src="img/ysl-lip.jpg" alt="Labial YSL" />
+        <p><strong>YSL Tatouage Couture:</strong> Color duradero y textura ligera.</p>
+      </article>
+      <article>
+        <img src="img/dior-base.jpg" alt="Base Dior" />
+        <p><strong>Dior Forever Skin:</strong> Base mate luminosa de larga duración.</p>
+      </article>
+      <article>
+        <img src="img/rare-blush.jpg" alt="Blush Rare Beauty" />
+        <p><strong>Rare Beauty Blush:</strong> Colorete líquido con pigmento potente.</p>
+      </article>
+      <article>
+        <img src="img/fenty-iluminador.jpg" alt="Iluminador Fenty" />
+        <p><strong>Fenty Highlighter:</strong> Brillo intenso con textura suave.</p>
+      </article>
+      <article>
+        <img src="img/sephora-palet.jpg" alt="Paleta Sephora" />
+        <p><strong>Sephora Palette:</strong> Sombras versátiles para todo look.</p>
+      </article>
+      <article>
+        <img src="img/ysl-perfume.jpg" alt="Perfume YSL" />
+        <p><strong>YSL Libre:</strong> Perfume floral con toque elegante.</p>
+      </article>
+    </section>
+
+    <!-- BOTÓN Ver más -->
+    <div style="text-align: center; margin: 2rem 0;">
+        <button id="btnVerMas" class="ver-mas-btn"><span>Ver más</span></button>
+      </div>
+  
+  <!-- Contenido oculto -->
+  <div id="contenidoExtra" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+    <!-- Tabla comparativa -->
+    
+    <!-- Tabla comparativa -->
+    <table class="comparativa">
+    <section class="galeria" style="padding: 2rem;">
+      <h2 style="grid-column: 1/-1;">Comparativa de Productos</h2>
+
+      
+      <table style="width: 100%; border-collapse: collapse; background-color: #fff; margin: 1rem auto;">
+        <thead>
+          <tr style="background-color: #000000;">
+            <th>Producto</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>Duración</th>
+            <th>Tipo de piel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dior Forever Skin</td>
+            <td>Dior</td>
+            <td>$1,200 MXN</td>
+            <td>12 h</td>
+            <td>Mixta a grasa</td>
+          </tr>
+          <tr>
+            <td>YSL Tatouage</td>
+            <td>YSL</td>
+            <td>$950 MXN</td>
+            <td>8 h</td>
+            <td>Todo tipo</td>
+          </tr>
+          <tr>
+            <td>Rare Beauty Blush</td>
+            <td>Rare Beauty</td>
+            <td>$620 MXN</td>
+            <td>Todo el día</td>
+            <td>Sensible, seca</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>      
+
+    <div class="menu-unas">
+        <h3>Ahora tenemos para ti hermosos diseños de uñas para esta temporada 🤍</h3>
+      </div>
+
+<!-- Galería de uñas -->
+<section id="galeria-uñas" class="galeria">
+    <h2 style="grid-column: 1/-1;">Diseños de Uñas de Temporada</h2>
+    <article><img src="img/uñas1.jpg" alt="Diseño uñas 1" /></article>
+    <article><img src="img/uñas2.jpg" alt="Diseño uñas 2" /></article>
+    <article><img src="img/uñas3.jpg" alt="Diseño uñas 3" /></article>
+    <article><img src="img/uñas4.jpg" alt="Diseño uñas 4" /></article>
+  </section>
+
+
+    <!-- Consejo -->
+    <section style="padding: 2rem; text-align: center;">
+      <h4>Y por último, un pequeño recordatorio..</h4>
+      <p style="font-style: italic; margin-top: 1rem;">
+        La belleza empieza cuando decides ser tú misma. Cuídate, consiéntete y recuerda que mereces lo mejor. 💖
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Botón "Ver más" para sección Belleza
+    const btnVerMas = document.getElementById("btnVerMas");
+    const contenidoExtra = document.getElementById("contenidoExtra");
+  
+    if (btnVerMas && contenidoExtra) {
+      let expandido = false;
+  
+      btnVerMas.addEventListener("click", () => {
+        expandido = !expandido;
+  
+        if (expandido) {
+          contenidoExtra.style.maxHeight = contenidoExtra.scrollHeight + "px";
+          btnVerMas.textContent = "Ver menos";
+        } else {
+          contenidoExtra.style.maxHeight = "0";
+          btnVerMas.textContent = "Ver más";
+        }
+      });
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Margue. Proyecto Fundamentos de Tecnologías Web. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

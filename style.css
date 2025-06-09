@@ -1,0 +1,550 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #fff;
+    color: #111;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    letter-spacing: 8px;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #bb2649;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(85%);
+}
+
+.hero-texto {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    max-width: 400px;
+}
+
+.hero-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-texto p {
+    font-style: italic;
+}
+
+/* GALERÍA */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.galeria article {
+    border: 1px solid #eee;
+    padding: 1rem;
+    transition: box-shadow 0.3s;
+    background-color: #fefefe;
+}
+
+.galeria article:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.galeria img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.galeria p {
+    text-align: center;
+    font-style: italic;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+
+/* RESPONSIVO GENERAL */
+@media (max-width: 600px) {
+    .hero-texto {
+        max-width: 90%;
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* --- PAGINA 2 --- */
+
+/* SECCIÓN: Tips de Belleza */
+.tips-galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tip {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 1rem;
+    border-left: 4px solid #bb2649;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.tip img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tip h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #bb2649;
+}
+
+.tip p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.tips-galeria button {
+    align-self: center;
+    justify-self: center;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background-color: #bb2649;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tips-galeria button:hover {
+    background-color: #9e1d3c;
+}
+
+/* SECCIÓN: Productos Recomendados */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.producto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.producto p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* SECCIÓN: Tabla Comparativa */
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+table thead {
+    background-color: #bb2649;
+    color: white;
+}
+
+table th, table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* SECCIÓN: Galería de Uñas */
+.galeria-uñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.galeria-uñas img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.galeria-uñas img:hover {
+    transform: scale(1.03);
+}
+
+/* CONSEJO DE AUTOESTIMA */
+section p {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* RESPONSIVO - Belleza */
+@media (max-width: 768px) {
+    .tip {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tip img {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto img {
+        height: 180px;
+    }
+
+    table th, table td {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- PAGINA 3 --- */
+
+/* Tarjetas elegantes */
+.card {
+    background: #ffffff; /* blanco puro */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 2rem;
+    color: #1a1a1a;
+  }
+  
+  /* Contenedor interno */
+  .card-content {
+    position: relative;
+  }
+  
+  /* Lista de beneficios */
+  .subscription-info {
+    max-height: 180px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  /* Botón "Ver más" */
+  .expand-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  
+  /* Tabla del formulario */
+  .form-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Libre Baskerville', serif;
+    color: #000;
+  }
+  
+  .form-table td {
+    padding: 0.7rem;
+    vertical-align: top;
+  }
+  
+  .form-table label {
+    font-weight: 600;
+  }
+  
+  /* Campos de texto */
+  .form-table input,
+  .form-table textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 2px solid #999;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    transition: border-color 0.3s, background-color 0.3s;
+    color: #1a1a1a;
+  }
+  
+  .form-table input:focus,
+  .form-table textarea:focus {
+    border-color: #000000;
+    background-color: #ffffff;
+  }
+  
+  /* Botón de enviar */
+  .form-table button {
+    width: 100%;
+    padding: 1rem;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .form-table button:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Mensajes */
+  .error-message {
+    color: #b00020;
+    font-size: 0.9rem;
+    display: none;
+    margin-top: 0.3rem;
+  }
+  
+  .thank-you-message {
+    font-style: italic;
+    color: #555;
+    margin-top: 1rem;
+    display: none;
+  }
+
+/* pantallas */
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .titulo {
+      font-size: 18px;
+    }
+  }
+  
+
+  /* unas */
+  
+  .menu-unas {
+    background-color: #fff;
+    border: none;
+    padding: 3rem 2rem;
+    margin: 5rem auto;
+    width: 90%;
+    max-width: 540px;
+    text-align: center;
+    border-radius: 0;
+    font-family: 'Libre Baskerville', serif;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  }
+  
+  .menu-unas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 60%;
+    background-color: #000;
+    opacity: 0.15;
+  }
+  
+  .menu-unas h3 {
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem; 
+    color: #000;
+    font-weight: 400; 
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    text-transform: none;
+    font-style: italic; 
+  }
+  
+  .ver-mas-btn {
+    display: inline-block;
+    padding: 14px 38px;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ver-mas-btn::before {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .ver-mas-btn:hover::before {
+    width: 100%;
+  }
+  
+  .ver-mas-btn span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .ver-mas-btn:hover span {
+    color: #fff;
+  }
+
+  /* belleza */
+  #contenidoExtra {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  table.comparativa {
+    width: 80%;
+    max-width: 900px;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    background-color: #000000;
+  }
+
+ /* Foco visual mejorado */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid #360101;
+    outline-offset: 3px;
+    transition: outline 0.2s ease;
+  }

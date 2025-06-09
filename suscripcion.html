@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suscripción | Margue</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Margue</h1>
+    <p class="subtitulo">Descubre tu estilo. Vive con glamour.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="belleza.html">Belleza</a></li>
+        <li><a href="suscripcion.html" aria-current="page">Suscripción</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Suscripción margue premium</h2>
+      <div class="card-content">
+        <ul class="subscription-info">
+          <li>Acceso mensual a ediciones digitales y físicas de revistas</li>
+          <li>Descuentos especiales en productos y eventos</li>
+          <li>Contenido exclusivo: tutoriales, entrevistas, tendencias</li>
+          <li>Invitaciones a webinars y eventos VIP</li>
+          <li>Envío gratuito y newsletter personalizada</li>
+        </ul>
+        <button id="btnVerMas" class="ver-mas-btn" aria-expanded="false" aria-controls="contenidoExtra"><span>Ver más</span></button>
+      </div>
+
+      <ul id="contenidoExtra" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;" aria-hidden="true">
+        <li>El costo es de $500 mensuales.</li>
+        <li>En la suscripción de tu primer mes incluye una tarjeta de $1,000.00 en Sephora.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>¿Tienes preguntas o necesitas más información?</h2>
+      <div class="card-content">
+        <form id="contactForm" novalidate>
+          <table class="form-table">
+            <tr>
+              <td><label for="name">Nombre completo</label></td>
+              <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">Correo electrónico</label></td>
+              <td>
+                <input type="email" id="email" name="email" placeholder="correo@gmail.com" required aria-describedby="emailError" />
+                <p class="error-message" id="emailError" style="display:none;" role="alert">Debe terminar en <strong>@gmail.com</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="message">Mensaje / duda</label></td>
+              <td><textarea id="message" name="message" required></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Enviar consulta</button></td>
+            </tr>
+          </table>
+          <div class="thank-you-message" id="thankYouMsg" style="display:none;">¡Gracias por contactarnos! Te responderemos pronto. 💖</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Margue. Proyecto Fundamentos de Tecnologías Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Botón Ver Más / Ver Menos
+    const btnVerMas = document.getElementById('btnVerMas');
+    const contenidoExtra = document.getElementById('contenidoExtra');
+
+    btnVerMas.addEventListener('click', () => {
+      const isExpanded = btnVerMas.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        contenidoExtra.style.maxHeight = '0';
+        btnVerMas.setAttribute('aria-expanded', 'false');
+        contenidoExtra.setAttribute('aria-hidden', 'true');
+        btnVerMas.querySelector('span').textContent = 'Ver más';
+      } else {
+        contenidoExtra.style.maxHeight = contenidoExtra.scrollHeight + 'px';
+        btnVerMas.setAttribute('aria-expanded', 'true');
+        contenidoExtra.setAttribute('aria-hidden', 'false');
+        btnVerMas.querySelector('span').textContent = 'Ver menos';
+      }
+    });
+
+    // Validación y envío del formulario
+    const form = document.getElementById('contactForm');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const thankYouMsg = document.getElementById('thankYouMsg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      emailError.style.display = 'none';
+
+      const emailValue = emailInput.value.trim();
+      if (!emailValue.endsWith('@gmail.com')) {
+        emailError.style.display = 'block';
+        emailInput.focus();
+        return;
+      }
+
+      // Aquí podrías agregar más validaciones si quieres...
+
+      // Simular envío y mostrar mensaje de agradecimiento
+      form.style.display = 'none';
+      thankYouMsg.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

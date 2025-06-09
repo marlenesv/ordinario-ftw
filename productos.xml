@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+  <producto>
+    <nombre>Base Luminosa</nombre>
+    <marca>GlowSkin</marca>
+    <precio>320</precio>
+    <uso>Rostro</uso>
+    <img>imagenes/productos/base.jpg</img>
+  </producto>
+  <producto>
+    <nombre>Delineador Waterproof</nombre>
+    <marca>EyeSharp</marca>
+    <precio>120</precio>
+    <uso>Ojos</uso>
+    <img>imagenes/productos/delineador.jpg</img>
+  </producto>
+  <producto>
+    <nombre>Rubor Natural</nombre>
+    <marca>RosyCheeks</marca>
+    <precio>150</precio>
+    <uso>Mejillas</uso>
+    <img>imagenes/productos/rubor.jpg</img>
+  </producto>
+  <producto>
+    <nombre>Labial Mate</nombre>
+    <marca>LipQueen</marca>
+    <precio>180</precio>
+    <uso>Labios</uso>
+    <img>imagenes/productos/labial.jpg</img>
+  </producto>
+  <producto>
+    <nombre>Máscara de Pestañas</nombre>
+    <marca>BlackBold</marca>
+    <precio>200</precio>
+    <uso>Ojos</uso>
+    <img>imagenes/productos/mascara.jpg</img>
+  </producto>
+  <producto>
+    <nombre>Paleta de Sombras</nombre>
+    <marca>ColorPop</marca>
+    <precio>400</precio>
+    <uso>Ojos</uso>
+    <img>imagenes/productos/sombras.jpg</img>
+  </producto>
+</catalogo>
