@@ -28,6 +28,4 @@ Puedes visitar mi página web funcionando desde GitHub Pages en el siguiente enl
 El siguiente video muestra la navegación completa por el sitio, haciendo énfasis en la accesibilidad con lector de pantalla, uso del teclado y validación de criterios establecidos en la rúbrica.
 
 🔗 **Video en YouTube**:  
-[https://www.youtube.com/watch?v=TU-LINK-AQUI](https://www.youtube.com/watch?v=TU-LINK-AQUI)
-
-> *El video se encuentra publicado en YouTube bajo la modalidad “No listado” para su fácil acceso.*
+https://youtu.be/TNBURDpo0Hg
